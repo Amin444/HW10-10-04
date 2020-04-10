@@ -8,8 +8,11 @@ namespace HW10_10_04
         {
             string ProPassword ="Key_Document-TXT";
             string ExpPassword = "Exp-Doc_j7HH";
+            while(true)
+            {
             System.Console.Write("enter Pro Version or Exp Version:");
             string access = Console.ReadLine();
+            System.Console.WriteLine("   ");
             System.Console.WriteLine("Вы ввели не верный пароль тфк что пока пользуйтесь бесплатной версией )))");           
             if(access==ProPassword)
             {
@@ -29,8 +32,8 @@ namespace HW10_10_04
                 d.SaveDocument();
                 d.EditDocument();
             }
-                
             Console.ReadKey();
+            }   
 
         }
     }
@@ -70,4 +73,42 @@ namespace HW10_10_04
         }
        
     }
+
+    interface IPalayer
+    {
+        public void Play()
+        {
+
+        }
+        public void Pause()
+        {
+
+        }
+        public void stop()
+        {
+
+        }
+    }
+    interface IRecodable
+    {
+           void Record();
+           void Pause();
+            void Stop();
+    }
+     
+        
+
+        
+     
+
+
+        class Player:IPalayer
+        {
+
+        }
+
+         class Player1:IRecodable  
+         {
+
+         }
 }
